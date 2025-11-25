@@ -3,12 +3,14 @@ import os
 
 DEBUG = os.getenv('DEBUG_MODE', 'false').lower() == 'true'
 
+
 def add(a, b):
     """Return the sum of two numbers."""
     result = a + b
     if DEBUG:
         print(f"DEBUG: {a} + {b} = {result}")
     return result
+
 
 def subtract(a, b):
     """Return the difference of two numbers."""
@@ -17,12 +19,14 @@ def subtract(a, b):
         print(f"DEBUG: {a} - {b} = {result}")
     return result
 
+
 def multiply(a, b):
     """Return the product of two numbers."""
     result = a * b
     if DEBUG:
         print(f"DEBUG: {a} × {b} = {result}")
     return result
+
 
 def divide(a, b):
     """Return the quotient of two numbers."""
