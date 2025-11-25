@@ -29,3 +29,10 @@ jobs:
     steps:
       - name: Display test result
         run: echo "Test result was ${{ needs.test-default.outputs.test-result }}"
+      - name: Run tests with coverage
+        run: pytest -v --cov=calculator --cov-report=t
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: coverage-report
+            path: .coverage
