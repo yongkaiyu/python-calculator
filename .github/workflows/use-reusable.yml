@@ -38,7 +38,7 @@ jobs:
       - name: Display test result
         run: echo "Test result was ${{ needs.test-default.outputs.test-result }}"
       - name: Run tests with coverage
-        run: pytest -v --cov=calculator --cov-report=t
+        run: pytest -v --cov=calculator --cov-report=term-missing
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v4
         with:
